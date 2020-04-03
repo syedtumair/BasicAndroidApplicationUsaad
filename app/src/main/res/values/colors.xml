@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#A0A7D7</color>
+    <color name="colorPrimaryDark">#8891CD</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="status_hearing">#7B1FA2</color>
+    <color name="status_not_hearing">#757575</color>
+    <color name="colorBackground">#C5C9E7</color>
+    <color name="colorReadingButton">#a5d6a7</color>
+    <color name="colorWritingButton">#DB9999</color>
+    <color name="colorCalcButton">#F9ECB5</color>
+    <color name="colorBlue">#9ad8fc</color>
+    <color name="colorBrown">#bcaaa4</color>
+    <color name="lightPurple">#d0d3e8</color>
+    <color name="darkPurple">#8c94d1</color>
+    <color name="colorGreen">#85BA6E</color>
+    <color name="colorDarkBlue">#7C84C8</color>
+    <color name="colorYellow">#dbe043</color>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadCommonWordsActivity"
+    android:background="@color/colorBackground">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_back"
+        android:background="@color/colorWritingButton"
+        android:layout_margin="0dp"
+        android:onClick="backButtonSelected"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relative_layout_bottom"
+        android:layout_below="@+id/back_button"
+        android:orientation="vertical"
+        android:padding="@dimen/medium_padding"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="@dimen/border_padding"
+            android:background="@color/darkPurple">
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightPurple"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_height="65dp"
+            android:layout_width="65dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_prev"
+            android:background="@color/colorDarkBlue"
+            android:layout_gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="prevButtonSelected"
+            />
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_next"
+            android:background="@color/colorGreen"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:onClick="nextButtonSelected"
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

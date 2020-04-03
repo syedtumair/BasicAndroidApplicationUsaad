@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@color/colorBackground">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/main_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/small_padding"
+        >
+    <LinearLayout
+        android:id="@+id/upper_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/small_padding"
+    >
+        <com.example.ahmed.ustaad.views.ImageButtonSquare
+            android:id="@+id/reading_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            android:src="@drawable/reading"
+            android:background="@color/colorReadingButton"
+            android:padding="@dimen/button_padding"
+            android:layout_margin="10dp"
+            android:onClick="readingButtonSelected"
+            />
+
+        <com.example.ahmed.ustaad.views.ImageButtonSquare
+            android:id="@+id/writing_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            android:src="@drawable/writing"
+            android:background="@color/colorWritingButton"
+            android:paddingTop="40dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="40dp"
+            android:paddingLeft="50dp"
+            android:layout_margin="10dp"
+            android:onClick="writingButtonSelected"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/upper_linear_layout"
+        android:padding="@dimen/small_padding"
+        android:gravity="center"
+        >
+
+        <com.example.ahmed.ustaad.views.ImageButtonSquare
+            android:id="@+id/calc_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorCalcButton"
+            android:padding="@dimen/button_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/calculator"
+            android:onClick="calcButtonSelected"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

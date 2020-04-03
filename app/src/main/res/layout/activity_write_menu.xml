@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteMenuActivity"
+    android:background="@color/colorBackground">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerInside"
+        android:layout_weight="1"
+        android:src="@drawable/arrow_back"
+        android:background="@color/colorWritingButton"
+        android:layout_margin="0dp"
+        android:onClick="backButtonSelected"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/main_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/small_padding"
+        >
+        <LinearLayout
+            android:id="@+id/upper_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@id/toolbar"
+            android:padding="@dimen/small_padding"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                >
+                <com.example.ahmed.ustaad.views.ImageButtonSquare
+                    android:id="@+id/write_words"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/character_color"
+                    android:background="@color/colorReadingButton"
+                    android:padding="@dimen/button_padding"
+                    android:onClick="writeWordsButtonSelected"
+                    />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pencil"
+                    android:layout_alignBottom="@id/write_words"
+                    android:layout_alignRight="@id/write_words"
+                    android:layout_margin="@dimen/small_padding"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                >
+
+                <com.example.ahmed.ustaad.views.ImageButtonSquare
+                    android:id="@+id/write_numbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:src="@drawable/numbers"
+                    android:background="@color/colorBlue"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="30dp"
+                    android:onClick="writeNumbersButtonSelected"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pencil"
+                    android:layout_alignBottom="@id/write_numbers"
+                    android:layout_alignRight="@id/write_numbers"
+                    android:layout_margin="@dimen/small_padding"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@id/upper_linear_layout"
+            android:padding="@dimen/small_padding"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                >
+
+                <com.example.ahmed.ustaad.views.ImageButtonSquare
+                    android:id="@+id/random_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorCalcButton"
+                    android:padding="@dimen/button_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/microphone"
+                    android:onClick="randomWordButtonSelected"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pencil"
+                    android:layout_alignBottom="@id/random_word"
+                    android:layout_alignRight="@id/random_word"
+                    android:layout_margin="@dimen/small_padding"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                >
+
+                <com.example.ahmed.ustaad.views.ImageButtonSquare
+                    android:id="@+id/write_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:src="@drawable/name_color"
+                    android:background="@color/colorBrown"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="30dp"
+                    android:onClick="writeNameButtonSelected"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pencil"
+                    android:layout_alignBottom="@id/write_name"
+                    android:layout_alignRight="@id/write_name"
+                    android:layout_margin="@dimen/small_padding"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

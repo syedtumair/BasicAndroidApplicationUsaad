@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--&lt;!&ndash;-->
+  <!--Copyright 2016 Google Inc. All Rights Reserved.-->
+
+  <!--Licensed under the Apache License, Version 2.0 (the "License");-->
+  <!--you may not use this file except in compliance with the License.-->
+  <!--You may obtain a copy of the License at-->
+
+  <!--http://www.apache.org/licenses/LICENSE-2.0-->
+
+  <!--Unless required by applicable law or agreed to in writing, software-->
+  <!--distributed under the License is distributed on an "AS IS" BASIS,-->
+  <!--WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.-->
+  <!--See the License for the specific language governing permissions and-->
+  <!--limitations under the License.-->
+<!--&ndash;&gt;-->
+<!--<android.support.design.widget.CoordinatorLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".activities.SpeechRecognitionActivity">-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/app_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--android:paddingLeft="32dp"-->
+            <!--android:paddingRight="32dp"/>-->
+
+        <!--<include layout="@layout/item_result"/>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recycler_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:clipToPadding="false"-->
+        <!--android:paddingBottom="@dimen/spacing_small"-->
+        <!--android:paddingTop="@dimen/spacing_small"-->
+        <!--app:behavior_overlapTop="128dp"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+<!--</android.support.design.widget.CoordinatorLayout>-->
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_back"
+        android:background="@color/colorWritingButton"
+        android:layout_margin="0dp"
+        android:onClick="backButtonSelected"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back_button"
+        android:layout_above="@+id/relative_layout_bottom"
+        android:orientation="vertical"
+        android:background="@color/darkPurple"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/border_padding"
+    >
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightPurple"
+    />
+    </LinearLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/relative_layout_bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--&gt;-->
+        <!--<com.skyfishjy.library.RippleBackground-->
+            <!--android:id="@+id/ripple_background"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--app:rb_color="@color/colorGreen"-->
+            <!--app:rb_radius="32dp"-->
+            <!--app:rb_rippleAmount="4"-->
+            <!--app:rb_duration="3000"-->
+            <!--app:rb_scale="6"-->
+            <!--&gt;-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image_button_microphone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/medium_padding"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@android:drawable/ic_btn_speak_now"-->
+            <!--android:layout_centerHorizontal="true"-->
+        <!--/>-->
+        <!--</com.skyfishjy.library.RippleBackground>-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@id/relative_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_height="65dp"
+            android:layout_width="65dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_prev"
+            android:background="@color/colorDarkBlue"
+            android:layout_gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="prevButtonSelected"
+            />
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_next"
+            android:background="@color/colorGreen"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:onClick="nextButtonSelected"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.skyfishjy.library.RippleBackground
+                android:id="@+id/ripple_background"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:elevation="1000dp"
+                app:rb_color="@color/colorGreen"
+                app:rb_radius="10dp"
+                app:rb_rippleAmount="4"
+                app:rb_duration="3000"
+                app:rb_scale="6"
+                >
+
+                <ImageView
+                    android:id="@+id/image_button_microphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/medium_padding"
+                    android:layout_centerInParent="true"
+                    android:src="@android:drawable/ic_btn_speak_now"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorYellow"
+                    />
+            </com.skyfishjy.library.RippleBackground>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

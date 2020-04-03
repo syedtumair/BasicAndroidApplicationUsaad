@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.byox.drawview.views.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small_padding"
+        app:dv_draw_alpha="255"
+        app:dv_draw_anti_alias="true"
+        app:dv_draw_color="@color/colorAccent"
+        app:dv_draw_corners="round"
+        app:dv_draw_dither="true"
+        app:dv_draw_enable_zoom="true"
+        app:dv_draw_font_family="default_font"
+        app:dv_draw_font_size="12"
+        app:dv_draw_max_zoom_factor="8"
+        app:dv_draw_mode="draw"
+        app:dv_draw_style="stroke"
+        app:dv_draw_tool="pen"
+        app:dv_draw_width="25"
+        app:dv_draw_zoomregion_maxscale="5"
+        app:dv_draw_zoomregion_minscale="2"
+        app:dv_draw_zoomregion_scale="4"
+        android:background="@android:color/white"
+
+
+
+        />
+
+    <TextView
+        android:id="@+id/text_view_outline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="احمد"
+        android:textSize="150dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/urdu_outline"
+        android:layout_alignTop="@id/draw_view"
+        android:layout_alignBottom="@id/draw_view"
+        android:layout_alignLeft="@id/draw_view"
+        android:layout_alignRight="@id/draw_view"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/text_view_filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="احمد"
+        android:textSize="150dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/al_fars_2_kamran_filled_final"
+        android:layout_alignTop="@id/draw_view"
+        android:layout_alignBottom="@id/draw_view"
+        android:layout_alignLeft="@id/draw_view"
+        android:layout_alignRight="@id/draw_view"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

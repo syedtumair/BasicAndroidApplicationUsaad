@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
+    <dimen name="button_padding">30dp</dimen>
+    <dimen name="border_padding">0.5dp</dimen>
+</resources>

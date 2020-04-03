@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadNumbersActivity"
+    android:background="@color/colorBackground">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_back"
+        android:background="@color/colorWritingButton"
+        android:layout_margin="0dp"
+        android:onClick="backButtonSelected"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_button"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        >
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/darkPurple">
+            <TextView
+                android:id="@+id/number_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:fontFamily="@font/florsn01"
+                android:gravity="center"
+                android:textSize="125dp"
+                android:background="@color/lightPurple"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/number_image_view"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/three_balls"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_height="65dp"
+            android:layout_width="65dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_prev"
+            android:background="@color/colorDarkBlue"
+            android:layout_gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="prevButtonSelected"
+            />
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_next"
+            android:background="@color/colorGreen"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:onClick="nextButtonSelected"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

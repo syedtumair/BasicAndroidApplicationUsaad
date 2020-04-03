@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ahmed.ustaad">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".applications.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DrawActivity"
+            android:screenOrientation="portrait"
+            android:label="Draw Activity">
+
+        </activity>
+        <activity
+            android:name=".DrawActivity"
+            android:screenOrientation="portrait"
+            android:label="Draw Activity Other"
+        />
+        <activity
+            android:name=".activities.WriteCommonWordsActivity"
+            android:screenOrientation="portrait"
+            android:label="Write Common Words"
+        />
+        <activity
+            android:name=".activities.WriteNumbersActivity"
+            android:screenOrientation="portrait"
+            android:label="Write Numbers"
+        />
+        <activity
+            android:name=".activities.ReadCustomWordActivity"
+            android:screenOrientation="portrait"
+            android:label="Read Custom Word"
+        />
+        <activity
+            android:name=".activities.SpeechRecognitionActivity"
+            android:screenOrientation="portrait"
+            android:label="Speech Recognition Activity"
+        />
+        <activity
+            android:name=".activities.CalculationActivity"
+            android:screenOrientation="landscape"
+            android:label="Calculation activity"
+        />
+
+        <service
+            android:name=".services.SpeechService"
+        />
+        <activity
+            android:name=".ReadMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WriteMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReadCommonWordsActivity" />
+        <activity android:name=".ReadNumbersActivity"></activity>
+    </application>
+
+</manifest>
